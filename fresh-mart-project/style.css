@@ -52,8 +52,8 @@ body{
 }
 
 .vegtable:hover{
-    background:#FFFDE7;
-    border-color:#FF9800;
+    background:#a9ffb0;
+    border-color:#66BB6A;
     transform:scale(1.05);
     box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
@@ -113,11 +113,10 @@ body{
     transition:0.4s;
 }
 
-.nonvegtable:hover{
-    background:#FFF3E0;
-    border-color:#FF9800;
+ .nonvegtable:hover{
+    background:#FFE5E5;
+    border-color:#FF6F00;
     transform:scale(1.05);
-    box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
 
 .nonvegtable img{
@@ -183,8 +182,8 @@ body{
 }
 
 .milktable:hover{
-    background:#E3F2FD;
-    border-color:#0D47A1;
+    background:#f7f8f8;
+    border-color:#2196F3;
     transform:scale(1.05);
     box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
@@ -231,4 +230,132 @@ body{
     color:#FFF176;
     transform:scale(1.1);
     box-shadow:0 5px 15px rgba(13,71,161,0.4);
+}
+
+/* ---------- Fruits Section ---------- */
+
+.fruittable{
+    width:300px;
+    padding:15px;
+    text-align:center;
+    background:#FFFFFF;
+    border:3px solid #FF9800;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.fruittable:hover{
+    background:#fcd2ab;
+    border-color:#F57C00;
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.fruittable img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.fruittable h1{
+    color:#D84315;
+    font-size:30px;
+    margin:15px 0;
+}
+
+.fruittable p{
+    color:#E91E63;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.fruittable h3{
+    color:#2E7D32;
+    font-size:20px;
+    margin:15px 0;
+}
+
+.fruittable button{
+    background:#FF9800;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.fruittable button:hover{
+    background:#F57C00;
+    color:#FFF176;
+    transform:scale(1.1);
+    box-shadow:0 5px 15px rgba(245,124,0,0.4);
+}
+
+/* ---------- Dry Fruits Section ---------- */
+
+.dryfruittable{
+    width:300px;
+    padding:15px;
+    text-align:center;
+    background:#FFF8E1;
+    border:3px solid #8D6E63;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.dryfruittable:hover{
+    background:#EFEBE9;
+    border-color:#6D4C41;
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.dryfruittable img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.dryfruittable h1{
+    color:#5D4037;
+    font-size:30px;
+    margin:15px 0;
+}
+
+.dryfruittable p{
+    color:#D84315;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.dryfruittable h3{
+    color:#6D4C41;
+    font-size:20px;
+    margin:15px 0;
+}
+
+.dryfruittable button{
+    background:#8D6E63;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.dryfruittable button:hover{
+    background:#5D4037;
+    color:#FFF176;
+    transform:scale(1.1);
+    box-shadow:0 5px 15px rgba(93,64,55,0.4);
 }
