@@ -120,13 +120,3 @@ Open **index.html** in your preferred web browser.
 This project is created for learning and educational purposes.
 
 ---
-
-<div align="center">
-
-### 🙏 Thank You for Visiting Fresh Mart!
-
-### 🛒 Happy Shopping! 🌿
-
-⭐ **If you like this project, don't forget to give it a Star!**
-
-</div>
