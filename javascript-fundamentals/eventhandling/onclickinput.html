@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollar to INR Converter</title>
+
+    <script>
+        function converter() {
+            // Step 1: Read the dollar value
+            let dollar = document.getElementById("dollar").value;
+
+            // Step 2: Perform the conversion
+            let inrValue = dollar * 95.78;
+
+            // Step 3: Display the result
+            document.getElementById("inr").value = inrValue.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Dollar to INR Converter</h2>
+
+    <label>Enter Dollar Value:</label>
+    <input type="number" id="dollar">
+
+    <br><br>
+
+    <button onclick="converter()">Convert</button>
+
+    <br><br>
+
+    <label>INR Value:</label>
+    <input type="text" id="inr" readonly>
+
+</body>
+</html>
