@@ -1,122 +1,82 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+/*import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [appleCount, setAppleCount] = useState(0);
+
+  function addApple() {
+    setAppleCount(appleCount + 1);
+  }
+
+  function removeApple() {
+    if (appleCount > 0) {
+      setAppleCount(appleCount - 1);
+    }
+  }
+
+  function resetApple() {
+    setAppleCount(0);
+  }
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <h1>Apples Count: {appleCount}</h1>
 
-      <div className="ticks"></div>
+      {appleCount === 0 ? (
+        <h2>No Apples are left</h2>
+      ) : (
+        <h2>Apples are Available</h2>
+      )}
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <button onClick={addApple}>Add Apple</button>
+      <button onClick={removeApple}>Remove Apple</button>
+      <button onClick={resetApple}>Reset</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;*/
+
+
+import { useState } from "react";
+
+function App() {
+  const [score, setScore] = useState(0);
+  const [balls, setBalls] = useState(0);
+
+  function addRuns(run) {
+    if (balls < 12) {
+      setScore(score + run);
+      setBalls(balls + 1);
+    }
+  }
+
+  function reset() {
+    setScore(0);
+    setBalls(0);
+  }
+
+  return (
+    <>
+      <h1>Cricket Score: {score}</h1>
+      <h2>
+        Overs: {Math.floor(balls / 6)}.{balls % 6}
+      </h2>
+
+      <button onClick={() => addRuns(1)}>+1</button>
+      <button onClick={() => addRuns(2)}>+2</button>
+      <button onClick={() => addRuns(3)}>+3</button>
+      <button onClick={() => addRuns(4)}>+4</button>
+      <button onClick={() => addRuns(5)}>+5</button>
+      <button onClick={() => addRuns(6)}>+6</button>
+      <button onClick={() => addRuns(7)}>+7</button>
+
+      <br /><br />
+
+      <button onClick={reset}>Reset</button>
+
+      {balls === 12 && <h2>2 Overs Completed</h2>}
+    </>
+  );
+}
+
+export default App;
