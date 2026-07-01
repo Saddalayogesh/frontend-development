@@ -1,0 +1,361 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#F8F8F8;
+}
+
+.main-heading{
+    text-align:center;
+    color:#2E7D32;
+    font-size:42px;
+    margin:20px;
+}
+
+.sub-heading{
+    text-align:center;
+    color:#555;
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.section-heading{
+    text-align:center;
+    font-size:35px;
+    margin:30px 0 15px;
+    color:#FF6F00;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+/* ---------- Vegetable Cards ---------- */
+
+.vegtable{
+    width:300px;
+    padding:15px;
+    text-align:center;
+    background:#FFFFFF;
+    border:3px solid #4CAF50;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.vegtable:hover{
+    background:#a9ffb0;
+    border-color:#66BB6A;
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.vegtable img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.vegtable h1{
+    color:#8E24AA;
+    font-size:30px;
+    margin:15px 0;
+}
+
+.vegtable p{
+    color:#E53935;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.vegtable h3{
+    color:#1565C0;
+    font-size:20px;
+    margin:15px 0;
+}
+
+.vegtable button{
+    background:#43A047;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.vegtable button:hover{
+    background:#E53935;
+    transform:scale(1.1);
+}
+
+/* ---------- Non-Veg Cards ---------- */
+
+.nonvegtable{
+    width:300px;
+    padding:15px;
+    text-align:center;
+    background:#FFFFFF;
+    border:3px solid #D32F2F;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+ .nonvegtable:hover{
+    background:#FFE5E5;
+    border-color:#FF6F00;
+    transform:scale(1.05);
+}
+
+.nonvegtable img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.nonvegtable h1{
+    color:#C62828;
+    font-size:30px;
+    margin:15px 0;
+}
+
+.nonvegtable p{
+    color:#EF6C00;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.nonvegtable h3{
+    color:#6D4C41;
+    font-size:20px;
+    margin:15px 0;
+}
+
+.nonvegtable button{
+    background:#D32F2F;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.nonvegtable button:hover{
+    background:#B71C1C;
+    transform:scale(1.1);
+}
+
+.thank-you{
+    text-align:center;
+    font-size:35px;
+    color:#2E7D32;
+    margin:40px 0;
+}
+
+/* ---------- Milk Products Section ---------- */
+
+.milktable{
+    width:300px;
+    padding:15px;
+    text-align:center;
+    background:#FFFFFF;
+    border:3px solid #2196F3;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.milktable:hover{
+    background:#f7f8f8;
+    border-color:#2196F3;
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.milktable img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.milktable h1{
+    color:#1565C0;
+    font-size:30px;
+    margin:15px 0;
+}
+
+.milktable p{
+    color:#E65100;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.milktable h3{
+    color:#6A1B9A;
+    font-size:20px;
+    margin:15px 0;
+}
+
+.milktable button{
+    background:#2196F3;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.milktable button:hover{
+    background:#0D47A1;
+    color:#FFF176;
+    transform:scale(1.1);
+    box-shadow:0 5px 15px rgba(13,71,161,0.4);
+}
+
+/* ---------- Fruits Section ---------- */
+
+.fruittable{
+    width:300px;
+    padding:15px;
+    text-align:center;
+    background:#FFFFFF;
+    border:3px solid #FF9800;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.fruittable:hover{
+    background:#fcd2ab;
+    border-color:#F57C00;
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.fruittable img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.fruittable h1{
+    color:#D84315;
+    font-size:30px;
+    margin:15px 0;
+}
+
+.fruittable p{
+    color:#E91E63;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.fruittable h3{
+    color:#2E7D32;
+    font-size:20px;
+    margin:15px 0;
+}
+
+.fruittable button{
+    background:#FF9800;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.fruittable button:hover{
+    background:#F57C00;
+    color:#FFF176;
+    transform:scale(1.1);
+    box-shadow:0 5px 15px rgba(245,124,0,0.4);
+}
+
+/* ---------- Dry Fruits Section ---------- */
+
+.dryfruittable{
+    width:300px;
+    padding:15px;
+    text-align:center;
+    background:#FFF8E1;
+    border:3px solid #8D6E63;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.dryfruittable:hover{
+    background:#EFEBE9;
+    border-color:#6D4C41;
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.dryfruittable img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.dryfruittable h1{
+    color:#5D4037;
+    font-size:30px;
+    margin:15px 0;
+}
+
+.dryfruittable p{
+    color:#D84315;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.dryfruittable h3{
+    color:#6D4C41;
+    font-size:20px;
+    margin:15px 0;
+}
+
+.dryfruittable button{
+    background:#8D6E63;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.dryfruittable button:hover{
+    background:#5D4037;
+    color:#FFF176;
+    transform:scale(1.1);
+    box-shadow:0 5px 15px rgba(93,64,55,0.4);
+}
