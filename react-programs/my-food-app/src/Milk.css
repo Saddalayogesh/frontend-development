@@ -1,0 +1,179 @@
+/* ===========================
+   Page
+=========================== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ===========================
+   Container
+=========================== */
+.milk-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.milk-container h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 45px;
+}
+
+/* ===========================
+   Rows
+=========================== */
+.milk-row {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+/* ===========================
+   Card
+=========================== */
+.milk-card {
+  width: 330px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.milk-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(52, 152, 219, 0.25);
+}
+
+/* ===========================
+   Image
+=========================== */
+.milk-card img {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.milk-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Product Name
+=========================== */
+.milk-card h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #222;
+}
+
+/* ===========================
+   Description
+=========================== */
+.description {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===========================
+   Price
+=========================== */
+.price {
+  color: #8e44ad;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ===========================
+   Button
+=========================== */
+.milk-card button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.milk-card button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.35);
+}
+
+.milk-card button:active {
+  transform: scale(0.97);
+}
+
+/* ===========================
+   Tablet
+=========================== */
+@media (max-width: 992px) {
+  .milk-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .milk-card {
+    width: 320px;
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+@media (max-width: 768px) {
+  .milk-container {
+    padding: 15px;
+  }
+
+  .milk-container h1 {
+    font-size: 2.3rem;
+  }
+
+  .milk-card {
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .milk-card img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .milk-card button {
+    width: 100%;
+  }
+}

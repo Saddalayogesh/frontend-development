@@ -1,0 +1,172 @@
+/* ===========================
+   HOME
+=========================== */
+
+.home {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero {
+  background: linear-gradient(135deg, #2e1065, #5b21b6, #7c3aed);
+  color: white;
+  padding: 80px 40px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero span {
+  color: #ffd54f;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.veg-text {
+  color: #7cfc00;
+}
+
+.nonveg-text {
+  color: #ffb703;
+}
+
+.milk-text {
+  color: #7fdbff;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.shop-btn {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  transform: translateY(-5px);
+}
+
+/* ===========================
+   CATEGORY CARDS
+=========================== */
+
+.menu {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.menu-btn {
+  width: 330px;
+  min-height: 320px;
+  border-radius: 20px;
+  padding: 30px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-btn:hover {
+  transform: translateY(-10px);
+}
+
+
+.menu-icon {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.explore-btn {
+  background: white;
+  color: #333;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .menu-btn {
+    width: 100%;
+    max-width: 340px;
+  }
+}
