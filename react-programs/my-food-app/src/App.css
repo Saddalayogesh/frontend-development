@@ -1,135 +1,23 @@
-/* ===========================
-   RESET
-=========================== */
+@import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--canvas);
+}
+
+.main-content {
+  flex: 1 0 auto;
+  padding: 120px 24px 60px; /* space for the floating navbar */
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* ===========================
-   BODY
-=========================== */
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: #f5f7fb;
-  color: #333;
-}
-
-/* ===========================
-   NAVBAR
-=========================== */
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-
-  padding: 18px;
-
-  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
-
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* ===========================
-   NAV ITEMS
-=========================== */
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  text-decoration: none;
-
-  color: white;
-
-  padding: 12px 22px;
-
-  border-radius: 12px;
-
-  font-size: 17px;
-  font-weight: 600;
-
-  transition: 0.3s;
-
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.nav-item svg {
-  font-size: 20px;
-}
-
-/* ===========================
-   HOVER
-=========================== */
-
-.nav-item:hover {
-  transform: translateY(-3px);
-  color: white;
-}
-
-.nav-item:nth-child(1):hover {
-  background: #f59e0b;
-}
-
-.nav-item:nth-child(2):hover {
-  background: #22c55e;
-}
-
-.nav-item:nth-child(3):hover {
-  background: #ef4444;
-}
-
-.nav-item:nth-child(4):hover {
-  background: #3b82f6;
-}
-
-/* ===========================
-   ACTIVE
-=========================== */
-
-.active-home {
-  background: #f59e0b;
-}
-
-.active-veg {
-  background: #22c55e;
-}
-
-.active-nonveg {
-  background: #ef4444;
-}
-
-.active-milk {
-  background: #3b82f6;
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
 @media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 15px;
-  }
-
-  .nav-item {
-    font-size: 15px;
-    padding: 10px 16px;
-  }
-
-  .nav-item svg {
-    font-size: 18px;
+  .main-content {
+    padding: 100px 16px 40px;
   }
 }

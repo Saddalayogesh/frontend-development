@@ -1,4 +1,38 @@
 /* ===========================
+   FONTS
+   Fraunces = characterful display serif (farm-stand, hand-stamped feel)
+   Inter    = clean body face
+   JetBrains Mono = utility face for tags/labels (reads like a price stamp)
+=========================== */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap");
+
+/* ===========================
+   TOKENS
+=========================== */
+:root {
+  --paper: #f8efdd;
+  --paper-dark: #efe2c6;
+  --ink: #211d17;
+  --forest: #1f3d2b;
+  --forest-deep: #14281c;
+  --moss: #4a7856;
+  --moss-light: #a8d08d;
+  --clay: #b5502f;
+  --clay-light: #e8a54b;
+  --sky: #6fa8c7;
+  --sky-light: #d9ecf3;
+  --gold: #d98e2b;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-lg: 22px;
+  --radius-full: 999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ===========================
    HOME
 =========================== */
 
@@ -6,6 +40,8 @@
   max-width: 1300px;
   margin: 40px auto;
   padding: 20px;
+  font-family: var(--font-body);
+  color: var(--ink);
 }
 
 /* ===========================
@@ -13,85 +49,145 @@
 =========================== */
 
 .hero {
-  background: linear-gradient(135deg, #2e1065, #5b21b6, #7c3aed);
-  color: white;
-  padding: 80px 40px;
-  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(120% 140% at 15% 0%, var(--moss) 0%, var(--forest) 45%, var(--forest-deep) 100%);
+  color: var(--paper);
+  padding: 90px 40px;
+  border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 50px rgba(20, 40, 28, 0.35);
+}
+
+/* soft organic "produce" glows instead of a flat gradient box */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 320px;
+  height: 320px;
+  background: var(--clay-light);
+  top: -120px;
+  right: -80px;
+}
+
+.hero::after {
+  width: 260px;
+  height: 260px;
+  background: var(--sky);
+  bottom: -100px;
+  left: -60px;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 900px;
   margin: auto;
 }
 
+/* badge styled like a hand-stamped market seal */
 .badge {
-  display: inline-block;
-  padding: 10px 25px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 30px;
-  font-weight: bold;
-  margin-bottom: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--paper);
+  color: var(--forest-deep);
+  border: 1.5px dashed var(--clay-light);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+  margin-bottom: 28px;
 }
 
 .hero h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  line-height: 1.2;
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 58px;
+  letter-spacing: -0.01em;
+  margin-bottom: 22px;
+  line-height: 1.15;
 }
 
 .hero span {
-  color: #ffd54f;
+  color: var(--gold);
+  font-style: italic;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.8;
-  margin-bottom: 35px;
+  margin: 0 auto 35px;
+  max-width: 640px;
+  color: rgba(248, 239, 221, 0.9);
 }
 
 .veg-text {
-  color: #7cfc00;
+  color: var(--moss-light);
 }
 
 .nonveg-text {
-  color: #ffb703;
+  color: var(--clay-light);
 }
 
 .milk-text {
-  color: #7fdbff;
+  color: var(--sky-light);
 }
 
 .hero-features {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 .feature {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 12px 20px;
-  border-radius: 30px;
+  background: rgba(248, 239, 221, 0.1);
+  border: 1px solid rgba(248, 239, 221, 0.25);
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
   font-weight: 600;
 }
 
 .shop-btn {
-  background: linear-gradient(135deg, #ff9800, #ff5722);
-  color: white;
+  background: linear-gradient(135deg, var(--gold), var(--clay));
+  color: var(--paper);
   border: none;
-  padding: 15px 40px;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: bold;
+  padding: 16px 42px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(181, 80, 47, 0.4);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 
 .shop-btn:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(181, 80, 47, 0.5);
+}
+
+.shop-btn:focus-visible,
+.menu-btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
 }
 
 /* ===========================
@@ -99,57 +195,81 @@
 =========================== */
 
 .menu {
-  margin-top: 70px;
+  margin-top: 64px;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 28px;
   flex-wrap: wrap;
 }
 
 .menu-btn {
+  position: relative;
   width: 330px;
   min-height: 320px;
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: var(--radius-lg);
+  padding: 34px 30px;
   text-decoration: none;
   text-align: center;
-  color: white;
+  color: var(--paper);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  /* stitched crate-label edge as the signature detail */
+  border-top: 3px dashed rgba(255, 255, 255, 0.45);
 }
 
 .menu-btn:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
 }
 
+.veg-card {
+  background: linear-gradient(160deg, var(--moss) 0%, #2f5138 100%);
+}
+
+.nonveg-card {
+  background: linear-gradient(160deg, var(--clay) 0%, #7c3418 100%);
+}
+
+.milk-card {
+  background: linear-gradient(160deg, var(--sky) 0%, #3a6c85 100%);
+}
 
 .menu-icon {
-  font-size: 70px;
-  margin-bottom: 20px;
+  font-size: 62px;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
 }
 
 .card-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 12px;
 }
 
 .card-text {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+  color: rgba(248, 239, 221, 0.9);
 }
 
 .explore-btn {
-  background: white;
-  color: #333;
-  padding: 10px 22px;
-  border-radius: 25px;
-  font-weight: bold;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform 0.25s var(--ease);
+}
+
+.menu-btn:hover .explore-btn {
+  transform: translateX(4px);
 }
 
 /* ===========================
@@ -157,16 +277,32 @@
 =========================== */
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 60px 24px;
+  }
+
   .hero h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .hero p {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .menu-btn {
     width: 100%;
     max-width: 340px;
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY
+=========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .shop-btn,
+  .menu-btn,
+  .explore-btn {
+    transition: none !important;
   }
 }
